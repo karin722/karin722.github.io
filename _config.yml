@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: ゴミ溜め場
+subtitle:やざぁにこ
 description:
 keywords:
-author: John Doe
+author: karin722
 language: en
 timezone:
 
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-nexmoe
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
