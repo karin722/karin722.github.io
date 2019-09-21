@@ -19,3 +19,6 @@
 [submodule "themes/insudes"]
 	path = themes/insudes
 	url = https://github.com/karin722/insude.git
+[submodule "themes/icarus"]
+	path = themes/icarus
+	url = https://github.com/karin722/hexo-theme-icarus.git
