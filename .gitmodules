@@ -15,7 +15,7 @@
 	url = https://github.com/yscoder/hexo-theme-indigo.git
 [submodule "themes/insude"]
 	path = themes/insude
-	url = https://github.com/ikeq/hexo-theme-inside.git
+	url = https://github.com/karin722/insude.git
 [submodule "themes/insudes"]
 	path = themes/insudes
 	url = https://github.com/karin722/insude.git
