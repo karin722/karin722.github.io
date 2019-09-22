@@ -22,3 +22,9 @@
 [submodule "themes/icarus"]
 	path = themes/icarus
 	url = https://github.com/karin722/hexo-theme-icarus.git
+[submodule "themes/--name"]
+	path = themes/--name
+	url = https://github.com/karin722/hexo-theme-icarus.git
+[submodule "themes/test"]
+	path = themes/test
+	url = https://github.com/karin722/hexo-theme-icarus.git
