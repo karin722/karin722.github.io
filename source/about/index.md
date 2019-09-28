@@ -6,16 +6,16 @@ date: 2019-09-28 13:18:35
 <!-- more -->
 <!-- toc -->
 
-#おスマホ
+### おスマホ
 iphone6s - 12.4
 xiaomi mi mix2s - floko
 
-#ﾊﾟｿﾝﾖﾖ
+### ﾊﾟｿﾝﾖﾖ
 dell inspiron 6400 - archlinux
 東芝 dynabook t554/45k13w - windows10
 
-#github
+### github
 https://github.com/karin722
 
-#Twitter
+### Twitter
 https://twitter.com/@karin722_x
