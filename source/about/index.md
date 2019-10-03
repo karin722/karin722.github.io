@@ -19,3 +19,9 @@ https://github.com/karin722
 
 ### Twitter
 https://twitter.com/@karin722_x
+
+## Kyash
+https://kyash.me/payments/acNx0e4qkT2hkHm91hWwpbpNC6T6
+
+## mastodon
+https://mstdn.maud.io/@w_jb_
