@@ -25,10 +25,10 @@ mix2sに飽きたので買いました。お値段30kでいい買い物をした
 OSはubuntu18.0.4を選択。vultrにはすでに19.xがありますからそちらを利用してもいいでしょう。swapは16GB作成。多分というか、これくらいないと最後の方のjavaなんたらで失敗します。物理メモリはすでに32GB以上ある方は無視して構わないと思います。
 
 ### 準備
-必要なパッケージはこれ(https://source.android.com/setup/build/initializing\)のとおり。インストールが終わったら念の為再起動しておきましょう。
+必要なパッケージはこれ (https://source.android.com/setup/build/initializing\) のとおり。インストールが終わったら念の為再起動しておきましょう。
 
-次は必要なソースをダウンロードします。これ(https://source.android.com/setup/build/downloading)のとおりにbin/repoになんかして、ビルドディレクトリを作成。入ってrepo init -uします。タグはPixel3(xl)用のandroid-10.0.0_r15を選択しました。終わったらrepo sync。
-常用を想定している方はここ(https://github.com/opengapps/aosp_build)をみてgappsを同梱しておきましょう。現時点でpixel3(xl)はandroid10対応版twrpがリリースされていないので後から焼けません。
+次は必要なソースをダウンロードします。これ (https://source.android.com/setup/build/downloading) のとおりにbin/repoになんかして、ビルドディレクトリを作成。入ってrepo init -uします。タグはPixel3(xl)用のandroid-10.0.0_r15を選択しました。終わったらrepo sync。
+常用を想定している方はここ (https://github.com/opengapps/aosp_build) をみてgappsを同梱しておきましょう。現時点でpixel3(xl)はandroid10対応版twrpがリリースされていないので後から焼けません。
 
 ### ビルド
 . build/envsetup.shしてlunch aosp_blueline-userしてmake -jX。ビルド完了まで3時間強かかりました。
