@@ -1,6 +1,6 @@
 # Custom nav
 nav:
-  title: "Clover Tuan"
+  title: "わ"
 
 favicon: ""
 
@@ -11,15 +11,15 @@ background:
 
 # Social media
 social:
-  Dribbble: https://dribbble.com/clovertuan
-  Behance: https://www.behance.net/clovertuan
-  Lofter: http://clovertuan.lofter.com/
-  Instagram: https://www.instagram.com/clovertuan/
-  GitHub: https://github.com/cloverTuan
+  ##Dribbble: https://dribbble.com/clovertuan
+  ##Behance: https://www.behance.net/clovertuan
+  ##Lofter: http://clovertuan.lofter.com/
+  ##Instagram: https://www.instagram.com/clovertuan/
+  GitHub: https://github.com/karin722
 
 # Custom footer
-mail: d.guangying@foxmail.com
-copyright: All rights reserved @Clover Tuan
+## mail: d.guangying@foxmail.com
+## copyright: All rights reserved @Clover Tuan
 
 # Custom menu. You can specific the path or the card style (only useful for category page).
 # Two kinds of card style: 'project-card', 'article-card',
@@ -32,7 +32,7 @@ menu:
   #   path: /tags/Stuffs
   #   card: article-card
   Home: /
-  Archive: /archives
+  ##Archive: /archives
   About: /about
 
 # Specific default categories or tags of home page.
