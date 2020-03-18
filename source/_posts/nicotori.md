@@ -40,7 +40,7 @@ DUの機能は以下の通りです。
 - bootanimation
 - ビルドサーバー代
 - NicoTori(DU) tweakの日本語訳
- 
+
 ## ソースコード
 - [Dirty Unicorn](https://github.com/DirtyUnicorns)
 - [FlokoROM](https://github.com/FlokoROM)
