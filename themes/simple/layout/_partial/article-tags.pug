@@ -1,0 +1,12 @@
+-
+  currentPage = item || page
+  tags = currentPage.tags
+
+.partial-simple-tags
+  ul
+    if tags && tags.length
+      each tag in tags.data
+        li
+          a(href=config.root+tag.path)
+            i.fa.fa-tag
+            =tag.name

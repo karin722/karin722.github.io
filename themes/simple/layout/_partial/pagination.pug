@@ -1,0 +1,13 @@
+- currentPage = page
+
+.simple-pagination
+  ul
+    if currentPage.prev
+      li.prev
+        a.card(href=config.root+currentPage.prev_link)
+          = __('pagination.prev')
+
+    if currentPage.next
+      li.next
+        a.card(href=config.root+currentPage.next_link)
+          = __('pagination.next')

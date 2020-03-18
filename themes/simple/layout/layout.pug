@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html
+  include _partial/head
+
+  body
+    nav.simple-layout-nav
+      include _partial/navbar
+
+    .simple-layout-content
+      !=body
+
+    if page.title && page.type !== 'tags'
+      #post-nav
+
+    include _partial/footer

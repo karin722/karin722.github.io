@@ -1,0 +1,27 @@
+-
+  let tags = site.tags.toArray();
+  tags = tags.map(tag => ({
+      name: tag.name,
+      path: tag.path,
+      number: tag.posts.count()
+    }))
+    .filter(tag => tag.number)
+
+  let maxTagNumber = 1;
+
+  tags.sort((a, b) => {
+    const max = a.number > b.number ? a.number : b.number;
+    maxTagNumber = max > maxTagNumber ? max : maxTagNumber;
+    return a.name < b.name ? -1 : 1;
+  });
+
+.simple-tags
+  //- h1.title=__('tags.title')
+
+  ul.tags
+    each tag in tags
+      - percent = (tag.number / maxTagNumber) * 0.4 + 0.6
+      li.card
+        a(href=url_for(tag.path) style="opacity:" + percent + ';font-size:' + percent + 'em;')
+          | #{tag.name}(#{tag.number})
+
