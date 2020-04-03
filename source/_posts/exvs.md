@@ -1,5 +1,5 @@
 ---
-title: exvs
+title: 機動戦士ガンダムEXVSのススメ
 date: 2020-04-03 22:09:24
 tags:
 ---
