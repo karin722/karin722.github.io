@@ -34,6 +34,17 @@ Pixel3を売却した際に頂いたものです。Amazonでカバーを調達�
 
 飼育員から国の給付金の一部をもらったので買いました。まだ実機が届いてません。
 
+----- 5/24追記 -----
+
+<iframe src="https://mstdn.maud.io/@w_jb_/104232044267602795/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://mstdn.maud.io/embed.js" async="async"></script>
+
+ついに届きました。即メモリ換装&SSD増設をして...
+
+<iframe src="https://mstdn.maud.io/@w_jb_/104232366933755180/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://mstdn.maud.io/embed.js" async="async"></script>
+
+最終的にメモリ16GB,SSD250GB(nvme)&SSD500GB(sata)になりました。これならandroidの実機ビルドもこなしてくれるでしょう。いい買い物をしました。
+
+----- 追記ここまで -----
 ## おわりに
 
 {% youtube rkTWzfx7UhY %}
