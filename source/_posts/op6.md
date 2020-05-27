@@ -43,7 +43,7 @@ Pixel3を売却した際に頂いたものです。Amazonでカバーを調達�
 <iframe src="https://mstdn.maud.io/@w_jb_/104232366933755180/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://mstdn.maud.io/embed.js" async="async"></script>
 
 最終的にメモリ16GB,SSD250GB(nvme)&SSD500GB(sata)になりました。これならandroidの実機ビルドもこなしてくれるでしょう。いい買い物をしました。
-
+最短４週間と言われていた納期も最終的にはちょうど2週間で届きました。うれしい。
 ----- 追記ここまで -----
 ## おわりに
 
