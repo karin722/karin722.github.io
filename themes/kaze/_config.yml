@@ -10,11 +10,7 @@ author_description: 🍌
 #------------------------
 menus:
   home: /
-  #archive: /archives
-  #tags: /tags
-  #categories: /categories
   about: /about
-  #friends: /links
 
 about:
   description: description
