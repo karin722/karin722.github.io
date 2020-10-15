@@ -79,6 +79,6 @@ theme: kaze
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
-  repo:
-  branch:
+  type: github
+  repo: https://github.com/karin722/karin_wiki
+  branch: master
