@@ -17,12 +17,12 @@ iphone6s 14.4 -> 14.3rc で動作確認しました
 {% asset_img FR_vmware_usb.png %}
 
 ## ビルドする
-ubuntu20.04ltsなら[https://raw.githubusercontent.com/LukeZGD/LukeZGD.github.io/master/scripts/futurerestore_compile.sh](これ)を実行すれば勝手にビルドしてくれます。すごいね
+ubuntu20.04ltsなら[これ](https://raw.githubusercontent.com/LukeZGD/LukeZGD.github.io/master/scripts/futurerestore_compile.sh)を実行すれば勝手にビルドしてくれます。すごいね
 
 途中で「Enter Y if futurerestore will be used on A13/A14 devices」とか言われるので、実行したい端末と相談してYとかNとか押してください。PCの前でシャゲダンをするとビルド時間が縮まるようです
 
 ## 実行
-[https://tools4hack.santalab.me/howto-tutorial-futurerestore-restore-update-downgrade-to-ios1131.html](tools4hack)みて頑張ってください。2年前の記事ですが、使用方法は変わっていません
+[tools4hack](https://tools4hack.santalab.me/howto-tutorial-futurerestore-restore-update-downgrade-to-ios1131.html)みて頑張ってください。2年前の記事ですが、使用方法は変わっていません
 > a12/a13/a14は実行前にapnonceの確認を忘れずに！切り替わっている可能性もあります
 
 {% asset_img FR_su.png %}
