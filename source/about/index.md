@@ -129,7 +129,7 @@ date: 2019-09-28 13:18:35
 <iframe src="https://open.spotify.com/embed/track/7drkoBPx9SHgtXOuFjD8eb" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 - トリコリコPLEASE!!
-<iframe src="https://open.spotify.com/embed/track/6d3G58cEHrqIMyDKaMuRu3" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<br><iframe src="https://open.spotify.com/embed/track/6d3G58cEHrqIMyDKaMuRu3" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 - GALAXY HidE and SeeK
 <iframe src="https://open.spotify.com/embed/track/4hpJT2KzDvOqjaeXrVsaMP" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
