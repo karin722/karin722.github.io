@@ -12,9 +12,11 @@ date: 2019-09-28 13:18:35
 
 ### すきな音楽
 - μ's - baby maybe 恋のボタン
+
 <iframe src="https://open.spotify.com/embed/track/4kRSDpXKE1JtzdWdpy2ePM" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 - Aqours - JIMO-AI Dash!
+
 <iframe src="https://open.spotify.com/embed/track/3UoWB25H7bsEjB622Caz2s" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 ## その他
