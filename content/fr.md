@@ -14,7 +14,7 @@ iphone6s 14.4 -> 14.3rc で動作確認しました
 
 ## vmware側の設定
 仮想マシン設定 > USBコントローラ > USBの互換性 を3.1に設定してください。そうしないとFuturerestoreが通常状態のiPhoneを認識できないようです
-![frusb](FR_su.png)
+![frusb](/FR_su.png)
 
 ## ビルドする
 ubuntu20.04ltsなら[これ](https://raw.githubusercontent.com/LukeZGD/LukeZGD.github.io/master/scripts/futurerestore_compile.sh)を実行すれば勝手にビルドしてくれます。すごいね
