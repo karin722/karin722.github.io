@@ -27,5 +27,4 @@ ubuntu20.04ltsなら[これ](https://raw.githubusercontent.com/LukeZGD/LukeZGD.g
 > a12/a13/a14は実行前にapnonceの確認を忘れずに！切り替わっている可能性もあります
 
 ![fr](/FR_su.png)
-
-チンパンジーは成功させましたよ、ニンゲン共は？
+<br>チンパンジーは成功させましたよ、ニンゲン共は？
