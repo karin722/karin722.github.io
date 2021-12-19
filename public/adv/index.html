@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.ivtune.net/images/apple-touch-icon-144x144.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://blog.ivtune.net/images/apple-touch-icon-120x120.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://blog.ivtune.net/images/apple-touch-icon-72x72.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://blog.ivtune.net/images/apple-touch-icon-57x57.png"/>
+  <link rel="short icon" href="https://blog.ivtune.net/images/favicon.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://blog.ivtune.net/style.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <title> • pixel3&amp;ラブライブ！</title>
+  
+  
+  
+</head>
+<body>
+<div id="sidebar" class="animated fadeInDown">
+  <div class="logo-title">
+    <div class="title">
+      <img src=https://blog.ivtune.net/images/logo@2x.png style="width:127px;" alt="logo"/>
+      <h3><a href="https://blog.ivtune.net/"></a></h3>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <ul class="social-links"><li><a href="https://github.com/karin722"><i class="fab fa-github"></i></a></li>
+    
+  </ul>
+  <div class="footer">
+    
+    <span>Designed by </span><a href="https://www.caicai.me">CaiCai</a>
+    <div class="by_zola"><a href="https://www.getzola.org/" target="_blank">Proudly published with Zola!</a></div>
+    
+  </div>
+</div>
+<div id="main">
+  <div class="page-top animated fadeInDown">
+    <div class="nav">
+      <li><a  href="https://blog.ivtune.net/">Home</a></li><li><a  href="https://blog.ivtune.net/about/">About</a></li><li><a  href="https://blog.ivtune.net/archive/">Archive</a></li></div>
+    <div class="information">
+      <div class="back_btn">
+        <li><a onclick="window.history.go(-1)" ><i class="fas fa-chevron-left"></i></a></li>
+      </div>
+      <div class="avatar"><img src="https://avatars.githubusercontent.com/u/54385201"></div>
+    </div>
+  </div>
+  <div class="autopagerize_page_element">
+    <div class="content">
+    
+<article class="post animated fadeInDown">
+  <h1><a href="https:&#x2F;&#x2F;blog.ivtune.net&#x2F;adv&#x2F;">pixel3&amp;ラブライブ！</a></h1>
+  
+  <div class="info">By karin722.</div>
+  
+  <div class="post-content"><p>pixel3とラ！の話</p>
+<span id="continue-reading"></span>
+<!-- toc -->
+<p>この記事は末代adventCalendar22日目です。昨日は----さんの----でした。</p>
+<h2 id="daredayo">だれだよ</h2>
+<p>矢澤にこの限界ヲタク</p>
+<h2 id="pixel-3">pixel 3</h2>
+<p>mix2sに飽きたので買いました。お値段30kでいい買い物をしたと思ってます。
+しゃしん</p>
+<p>今回は練習っつうか経験的なアレでAOSPをビルドしてみました。お初Android10です。</p>
+<h3 id="huan-jing">環境</h3>
+<p>今回もvultrを使いました。floko(android9)をビルドしたときと同じ構成でいいだろと思い6コア16GBメモリのものを選択。ちなみに一時間0.199ドルです。
+OSはubuntu18.0.4を選択。vultrにはすでに19.xがありますからそちらを利用してもいいでしょう。swapは16GB作成。多分というか、これくらいないと最後の方のjavaなんたらで失敗します。物理メモリはすでに32GB以上ある方は無視して構わないと思います。</p>
+<h3 id="zhun-bei">準備</h3>
+<p>必要なパッケージは<a href="https://source.android.com/setup/build/initializing">これ</a>のとおり。インストールが終わったら念の為再起動しておきましょう。</p>
+<p>次は必要なソースをダウンロードします。<a href="https://source.android.com/setup/build/downloading">これ</a>のとおりにbin/repoになんかして、ビルドディレクトリを作成。入ってrepo init -uします。タグはPixel3(xl)用のandroid-10.0.0_r15を選択しました。終わったらrepo sync。
+常用を想定している方は<a href="https://github.com/opengapps/aosp_build">ここ</a>をみてgappsを同梱しておきましょう。現時点でpixel3(xl)はandroid10対応版twrpがリリースされていないので後から焼けません。</p>
+<h3 id="birudo">ビルド</h3>
+<p>. build/envsetup.shしてlunch aosp_blueline-userしてmake -jX。ビルド完了まで3時間強かかりました。</p>
+<h3 id="hui-shou">回収</h3>
+<p>成果物を回収します。AOSPはlosとかと違ってzipで固めないので/bluelineにあるフォルダ以外をそのまま落としました。
+そしてfastboot flash -wで焼きます。これでおしまい。お疲れ様でした。</p>
+<p>pixelの話おわり!!ここからはラ！やぞ</p>
+<h2 id="raburaibu">ラブライブ！</h2>
+<p>末代のライバー率低くない？なんで？？？？</p>
+<h3 id="sukusuta">スクスタ</h3>
+<p>虹の推しはかすみなんですけど、最近スクスタでUR果林が出たのでそっちの話をしようと思います。いや～すき、だいすき。キャラとしても好きだしゴリラとしても好きです。最高。
+衣装は真姫のアレによく似たものですが、これを果林が着ると真姫とはまた違った印象を楽しめます。特におっぱいと太もも。真姫にはないものが果林にはあるので...
+ただ告知ツイートを見ると以前に登場したスクフェスSR果林と衣装がほぼ変わらないとの意見もあります。マント着てるだけでも全然違うんですーーーーーー！！！！！そんなんもわからんのはうんち
+性能からの評価も非常に高いです。旧果南顔負けのVoに高めに設定されたテクニック。自アピ31%が次SP特技に加算される特技は強力です。この特技は重複されるので準ゴリラの新ことりと組むといいかもしれません。そういえば同じような特技を事後果南が持ってましたね。ひらめきは凸なしで3スロ。フェス限らしいので常駐ガチャには出ないでしょうけど今年中にまた出るでしょどうせ(適当)と思ったけどやっぱ今年中ってか当分でなさそうみたいなのある...。</p>
+<h3 id="raburaibu-huesu">ラブライブ！フェス</h3>
+<p>現地入り確定しました！！！！！！！！！！！！！！！</p>
+<h3 id="osusumess">おすすめSS</h3>
+<p>今年私がPocketに投げた作品の中でも特に性癖に刺さったモノを紹介するだけ</p>
+<p>「[うみにこ]<a href="https://www.pixiv.net/novel/show.php?id=4883076">やりたいこと、やるべきこと</a>」</p>
+<p>「[R-18][にことり]<a href="https://www.pixiv.net/novel/show.php?id=10343318">かわいいものクレプトマニアック</a>」</p>
+<p>以上！！！！！！！読め！！！！！！！！！！！！！！</p>
+<h3 id="oharini">おはりに</h3>
+<p>最近、というかついさっきx121eのxubuntuを捨ててwindows10をインストールしました。理由はradikoolが使いたいから。んで今絶賛nodeとかブラウザとかインストールしてるんですけど、案外win10動くもんですね。最初だけ？？？
+というわけでmarkdownが気持ちよく書けるテキストエディタとそれなりに動きそうなブラウザを募集しております。あと来年あたりにはthinkpad x280あたり買いたいですね。くれ</p>
+</div>
+  <div class="post-footer">
+    <div class="meta">
+      <div class="info">
+        
+          <i class="far fa-sun"></i><span class="date">2019-12-22</span>
+        
+        
+          <i class="fas fa-tags"></i>
+          
+            <a class="tag" href="https://blog.ivtune.net/tags/Android">&nbsp;Android</a>
+          
+            <a class="tag" href="https://blog.ivtune.net/tags/lovelive">&nbsp;lovelive</a>
+          
+        
+      </div>
+    </div>
+  </div>
+</article>
+<div class="share">
+  <div class="weibo">
+    <a class="fab fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title),'&appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a>
+  </div>
+  <div class="twitter">
+    <a class="fab fa-twitter" href="http://twitter.com/share?text=pixel3&amp;ラブライブ！&url=https:&#x2F;&#x2F;blog.ivtune.net&#x2F;adv&hashtags=Android,lovelive"></a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

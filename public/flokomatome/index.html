@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.ivtune.net/images/apple-touch-icon-144x144.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://blog.ivtune.net/images/apple-touch-icon-120x120.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://blog.ivtune.net/images/apple-touch-icon-72x72.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://blog.ivtune.net/images/apple-touch-icon-57x57.png"/>
+  <link rel="short icon" href="https://blog.ivtune.net/images/favicon.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://blog.ivtune.net/style.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <title> • flokoまとめ</title>
+  
+  
+  
+</head>
+<body>
+<div id="sidebar" class="animated fadeInDown">
+  <div class="logo-title">
+    <div class="title">
+      <img src=https://blog.ivtune.net/images/logo@2x.png style="width:127px;" alt="logo"/>
+      <h3><a href="https://blog.ivtune.net/"></a></h3>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <ul class="social-links"><li><a href="https://github.com/karin722"><i class="fab fa-github"></i></a></li>
+    
+  </ul>
+  <div class="footer">
+    
+    <span>Designed by </span><a href="https://www.caicai.me">CaiCai</a>
+    <div class="by_zola"><a href="https://www.getzola.org/" target="_blank">Proudly published with Zola!</a></div>
+    
+  </div>
+</div>
+<div id="main">
+  <div class="page-top animated fadeInDown">
+    <div class="nav">
+      <li><a  href="https://blog.ivtune.net/">Home</a></li><li><a  href="https://blog.ivtune.net/about/">About</a></li><li><a  href="https://blog.ivtune.net/archive/">Archive</a></li></div>
+    <div class="information">
+      <div class="back_btn">
+        <li><a onclick="window.history.go(-1)" ><i class="fas fa-chevron-left"></i></a></li>
+      </div>
+      <div class="avatar"><img src="https://avatars.githubusercontent.com/u/54385201"></div>
+    </div>
+  </div>
+  <div class="autopagerize_page_element">
+    <div class="content">
+    
+<article class="post animated fadeInDown">
+  <h1><a href="https:&#x2F;&#x2F;blog.ivtune.net&#x2F;flokomatome&#x2F;">flokoまとめ</a></h1>
+  
+  <div class="info">By karin722.</div>
+  
+  <div class="post-content"><p>あるいはromのビルドなど</p>
+<span id="continue-reading"></span>
+<!-- toc -->
+<h2 id="qian-hui-noraburaibu">前回のラブライブ</h2>
+<ul>
+<li>mix2(chiron)用のflokoをねだる</li>
+<li>flokoええやん</li>
+<li>何故かビルド欲が出る</li>
+</ul>
+<h2 id="mix2qian-ban">mix2前半</h2>
+<ul>
+<li>ほたさんにねだってmix2用flokoをビルドしてもらう</li>
+<li>何故か4gつながらず</li>
+</ul>
+<h3 id="jie-jue-fa">解決法</h3>
+<p>4g通信したいsimをsim1スロットに挿し起動。apn等の設定を済ませた後シャットダウン、対象のsimをスロット2に差し込むと4g通信可能になります。
+なおromによってはsim1に入った状態でも可能な場合がある。なんでこうなるのかは分かりません...</p>
+<h2 id="mix2hou-ban">mix2後半</h2>
+<ul>
+<li>baikalOSベースでカーネルを弄り始める</li>
+<li>カーネル名を替えて、cpuガバナを少し追加したもの</li>
+<li>blu_schdutilの追加に成功。それ以外は動かないか選択肢に表示されなかった</li>
+</ul>
+<p>mix2sに無償アップグレード()したためカーネルの更新は終了。romの方は10月パッチから再開させたいな、というお気持ちですがvultrのクレジットがほぼもう無い事やそちらに注ぎ込めるｵｶﾈが無いことからビルド出来るかどうかわからない状態です。だれかiphone5を1500円で買ってください！何でもしますから！（何でもするとは言っていない）</p>
+<h2 id="mix2s">mix2s</h2>
+<ul>
+<li>９月パッチ前にビルド→無事成功</li>
+<li>９月パッチ適用後、兄弟機のpoco f1用カスタムカーネル移植作業をし始める</li>
+<li>これまたおんぶに抱っこ状態で無事成功。こちらはmix2s用にdefconfigを書き換え、名前を推しCPに変更したもの</li>
+<li>defconfig編集にはwinmargeに大変お世話になりました</li>
+<li>これのせいでビルド時間が二倍になってしまい、更に財政を圧迫させ上記のような状態になりました...</li>
+</ul>
+<p>ちなみに2s用カーネルの名前にもなった&quot;うみにこ&quot;ですが、界隈最強候補CP&quot;にこまき&quot;のおかげで非常に影が薄いCPです。pixivの供給も多いとは言えないので、これがまたμ’ｓロスを拗らせる原因になるときもあります（大抵の原因はｱｲﾎﾟｯﾖ）</p>
+<h2 id="jin-hou">今後</h2>
+<ul>
+<li>mix2s用のカーネルはなんとか面倒を見ていきたい</li>
+<li>時間かかってもいいから自機ビルドしたい</li>
+<li>iphone5をさっさと売りたい</li>
+<li>&quot;うみにこ&quot;はいいぞ</li>
+<li>&quot;にことり&quot;も中々おすすめ。こちらは薄い本も豊富。</li>
+<li>某大型ssサイトの閉鎖が結構キツイです。pocketに入ってるので読めるのですが、今後どうssを追っていこうか困ったもんです。</li>
+</ul>
+</div>
+  <div class="post-footer">
+    <div class="meta">
+      <div class="info">
+        
+          <i class="far fa-sun"></i><span class="date">2019-09-29</span>
+        
+        
+          <i class="fas fa-tags"></i>
+          
+            <a class="tag" href="https://blog.ivtune.net/tags/Android">&nbsp;Android</a>
+          
+        
+      </div>
+    </div>
+  </div>
+</article>
+<div class="share">
+  <div class="weibo">
+    <a class="fab fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title),'&appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a>
+  </div>
+  <div class="twitter">
+    <a class="fab fa-twitter" href="http://twitter.com/share?text=flokoまとめ&url=https:&#x2F;&#x2F;blog.ivtune.net&#x2F;flokomatome&hashtags=Android"></a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
