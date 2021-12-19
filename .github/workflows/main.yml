@@ -1,0 +1,88 @@
+name: Build And Deploy
+
+on:
+  push:
+    # masterに変更があったときだけjobを実行する
+    # メインのブランチ名がmainであればmainに書き換えてください
+    branches: [ master ]
+  pull_request:
+    # 上と同じ
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # ソースのリポジトリをcheckoutする
+      - name: checkout
+        uses: actions/checkout@v2
+
+      # zolaをインストールする
+      - name: install zola
+        run: |
+          sudo apt update
+          sudo apt install snapd
+          sudo snap install zola --edge
+
+      # Deploy先のリポジトリをcheckoutする
+      - name: checkout deploy repository
+        uses: actions/checkout@v2
+        with:
+          repository: karin722/blogpages # GitHub Pagesで公開しているリポジトリ名
+          path: public # zola buildでpublicディレクトリにビルドされる場合はpublicを、publishなど別のディレクトリであればそのディレクトリ名を書く
+          fetch-depth: 2
+          lfs: true # 必要であれば
+          ssh-key: ${{ secrets.dd}} # XXXには3で登録した秘密鍵のNameを書く(ssh-keyを登録しておくことで後でpushするときに特殊な操作が必要なくなる)
+
+      # checkoutしたリポジトリの.gitをtempに逃がす
+      - name: move .git to temp
+        run: |
+          mkdir ./temp
+          mv ./public/.git ./temp
+
+      # publicを削除
+      - name: remove public
+        run:
+          rm -rf ./public
+
+      # ビルド
+      - name: zola build
+        run:
+          zola build
+
+      # ビルドしたディレクトリに.gitを移動
+      - name: move .git to public
+        run:
+          mv ./temp/.git ./public
+
+      # ビルドしたものをコミットしpushする
+      - name: deploy
+        run: |
+          cd ./public
+          git add .
+          if git diff --cached --quiet ; then # 変更されたファイルがあるかチェック
+            # 変更されたファイルがない
+            # 後でログを見たときに変更がなかったことがわかるように出力
+            echo "No changes"
+          else
+            # 変更されたファイルがある
+            echo "Has changes"
+            # ソースのコミット内容と同じ内容でコミットするために一度publicから抜けコミットコメントをcommit_commentに格納
+            # 複数コミットがpushされた場合は最後のコメントを格納
+            cd ../
+            commit_comment=`git log -n 1 --pretty="%s"`
+            cd ./public
+            # gitの設定
+            git config --local user.name username
+            git config --local user.email user_email
+            git commit -m "$commit_comment"
+            git push
+          fi
+
+      # 一時的に使用していたファイルを削除
+      - name: remove temp and public directorys
+        run: |
+          rm -rf ./temp
+          rm -rf ./public
