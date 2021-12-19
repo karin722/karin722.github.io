@@ -34,7 +34,7 @@ jobs:
           path: public # zola buildでpublicディレクトリにビルドされる場合はpublicを、publishなど別のディレクトリであればそのディレクトリ名を書く
           fetch-depth: 2
           lfs: true # 必要であれば
-          ssh-key: ${{ secrets.dd}} # XXXには3で登録した秘密鍵のNameを書く(ssh-keyを登録しておくことで後でpushするときに特殊な操作が必要なくなる)
+          ssh-key: ${{ secrets.DD}} # XXXには3で登録した秘密鍵のNameを書く(ssh-keyを登録しておくことで後でpushするときに特殊な操作が必要なくなる)
 
       # checkoutしたリポジトリの.gitをtempに逃がす
       - name: move .git to temp
