@@ -1,8 +1,11 @@
----
-title: NicoToriOSを生やしました
-date: 2020-02-23 19:00:00
-tags:
----
++++
+title = "NicoToriOSを生やしました"
+date = 2020-02-23 19:00:00
+[taxonomies]
+tags = ["Android"]
+[extra]
+author = "karin722"
++++
 刈り取るかもしれない
 <!-- more -->
 <!-- toc -->

@@ -1,8 +1,11 @@
----
-title: NicoToriの進歩とか
-date: 2020-02-25 22:39:25
-tags:
----
++++
+title = "NicoToriの進歩とか"
+date = 2020-02-25 22:39:25
+[taxonomies]
+tags = ["Android"]
+[extra]
+author = "karin722"
++++
 進歩ダメです！
 <!-- more -->
 <!-- toc -->

@@ -1,8 +1,11 @@
----
-title: バナナ
-date: 2020-12-24 00:00:00
-tags:
----
++++
+title = "バナナ"
+date = 2020-12-24 00:00:00
+[taxonomies]
+tags = ["Other"]
+[extra]
+author = "karin722"
++++
 
 >この記事は[末代AdventCalendar](https://adventar.org/calendars/5046)24日目の記事です。
 <!-- more -->

@@ -1,8 +1,11 @@
----
-title: iPhone12 miniを買った
-date: 2020-11-14 09:36:28
-tags:
----
++++
+title = "iPhone12 miniを買った"
+date = 2020-11-14 09:36:28
+[taxonomies]
+tags = ["iPhone"]
+[extra]
+author = "karin722"
++++
 ほとんど衝動買い
 <!-- more -->
 <!-- toc -->

@@ -1,8 +1,11 @@
----
-title: 近況
-date: 2020-05-10 15:43:37
-tags:
----
++++
+title = "近況"
+date = 2020-05-10 15:43:37
+[taxonomies]
+tags = ["Android", "Other"]
+[extra]
+author = "karin722"
++++
 色々買ったり売ったり
 
 <!-- more -->

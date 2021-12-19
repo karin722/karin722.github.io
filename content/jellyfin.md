@@ -1,8 +1,11 @@
----
-title: jellyfin
-date: 2020-01-13 13:55:37
-tags:
----
++++
+title = "jellyfin"
+date = 2020-01-13 13:55:37
+[taxonomies]
+tags = ["Other"]
+[extra]
+author = "karin722"
++++
 べんりでよい
 <!-- more -->
 <!-- toc -->

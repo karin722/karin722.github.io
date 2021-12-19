@@ -1,8 +1,11 @@
----
-title: pixel3&ラブライブ！
-date: 2019-12-22 00:00:00
-tags:
----
++++
+title = "pixel3&ラブライブ！"
+date = 2019-12-22 00:00:00
+[taxonomies]
+tags = ["Android", "lovelive"]
+[extra]
+author = "karin722"
++++
 
 pixel3とラ！の話
 

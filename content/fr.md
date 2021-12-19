@@ -1,8 +1,11 @@
----
-title: ubuntuにおけるios14のfuturerestoreについて
-date: 2021-02-20 18:55:44
-tags:
----
++++
+title= "ubuntuにおけるios14のfuturerestoreについて"
+date = 2021-02-20 18:55:44
+[taxonomies]
+tags = ["Jailbreak"]
+[extra]
+author = "karin722"
++++
 備忘録
 <!-- more -->
 ## 環境

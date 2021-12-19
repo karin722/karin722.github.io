@@ -1,8 +1,11 @@
----
-title: UmiNico_kernel
-date: 2019-10-03 13:28:21
-tags:
----
++++
+title = "UmiNico_kernel"
+date = 2019-10-03 13:28:21
+[taxonomies]
+tags = ["Android"]
+[extra]
+author = "karin722"
++++
 UmiNiko kernelの話
 <!-- more -->
 <!-- toc -->

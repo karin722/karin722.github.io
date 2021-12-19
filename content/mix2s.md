@@ -1,8 +1,11 @@
----
-title: mix2s 一ヶ月使用した感想とか
-date: 2019-11-06 21:43:48
-tags:
----
++++
+title = "mix2s 一ヶ月使用した感想とか"
+date = 2019-11-06 21:43:48
+[taxonomies]
+tags = ["Android"]
+[extra]
+author = "karin722"
++++
 
 Q : なんでmix2s買ったんですか？
 

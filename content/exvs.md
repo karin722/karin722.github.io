@@ -1,8 +1,11 @@
----
-title: 機動戦士ガンダムEXVSのススメ
-date: 2020-04-03 22:09:24
-tags:
----
++++
+title = "機動戦士ガンダムEXVSのススメ"
+date = 2020-04-03 22:09:24
+[taxonomies]
+tags = ["exvs"]
+[extra]
+author = "karin722"
++++
 家庭版マキオンを買おう
 
 <!-- more -->

@@ -9,7 +9,12 @@ compile_sass = true
 build_search_index = false
 
 # theme
-theme = "lightspeed"
+# theme = "lightspeed"
+theme = "zola-paper"
+
+taxonomies = [
+    {name = "tags", rss = true, paginate_by = 5},
+]
 
 [markdown]
 # Whether to do syntax highlighting

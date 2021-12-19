@@ -1,8 +1,11 @@
----
-title: flokoまとめ
-date: 2019-09-29 22:25:34
-tags:
----
++++
+title = "flokoまとめ"
+date = 2019-09-29 22:25:34
+[taxonomies]
+tags = ["Android"]
+[extra]
+author = "karin722"
++++
 あるいはromのビルドなど
 <!-- more -->
 <!-- toc -->

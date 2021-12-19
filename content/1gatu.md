@@ -1,8 +1,13 @@
----
-title: 1月にゅーす
-date: 2020-01-31 18:00:00
-tags:
----
++++
+title = "1月にゅーす"
+date = 2020-01-31 18:00:00
+
+[extra]
+author = "karin722"
+
+[taxonomies]
+tags = ["Other"]
++++
 １月のできごと
 <!-- more -->
 <!-- toc -->
