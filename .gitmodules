@@ -1,0 +1,4 @@
+[submodule "themes/aomori"]
+	path = themes/aomori
+	url = https://github.com/karin722/hexo-theme-aomori
+	branch = master
