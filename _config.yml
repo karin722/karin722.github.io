@@ -99,7 +99,15 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: aomori
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+# hexo-github
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/karin722/karin722.github.io
+  branch: gh-pages
+  token: ''
+  message: done
+  name: karin722
+  email: fubdonstrk@gmail.com
+  extend_dirs:
+  ignore_hidden: true # default is true
+  ignore_pattern: regexp  # whatever file that matches the regexp will be ignored when deploying
