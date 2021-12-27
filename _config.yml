@@ -98,7 +98,24 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: aomori
-
+aomori_menu:
+  Home: /
+  Archives: /archives
+aomori_widgets:
+  - toc # Article navigation
+  - tag # Article tags
+  - recent_posts  # latest articles
+aomori_copyright: false # or false
+aomori_social:
+  -
+    icon: mastodon
+    type: logo
+    url: https://mstdn.maud.io/@w_jb_
+  -
+    icon: twitter
+    type: logo
+    url: https://twitter.com/cpg_vr
+aomori_favicon: 🐒
 # hexo-github
 deploy:
   type: git
