@@ -117,7 +117,7 @@ vr酔いするのであんまり長時間はできないんですが、たまに
 ついに来た！念願の推しソロアルバムです。ソロ版Deep Resonanceめっちゃすき。
 
 ## 『ラブライブ！虹ヶ咲学園スクールアイドル同好会』QU4RTZ デスクマット
-<img src=http://gs.dengeki.com/ss/gs/uploads/2022/12/93ba8c0c30e71fb851a2bc34e5806cfe.jpg witdh=80%>
+<img src=https://d1hc4zdhstp3wq.cloudfront.net/img/goods/L/302112001119.jpg width=40%>
 
 [dengekiya.com](https://dengekiya.com/shop/g/g4942330164822/)
 デスクマットもlogicool製品で揃えようかと思ってましたが、QU4RTZのデスクマットが出ると聞いて予約しました。かすみんかわいいっすね。
