@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="チンパンジー">
+
+
+
+
+
+<title>カーステを自宅でつかう | ゴミ溜め場</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography,line-clamp"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+  }
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+  })();
+  window.onload = function () {
+    // init iconify icon
+    const isDark = document.documentElement.classList.contains("dark");
+    if (isDark) {
+      $("#toggle-dark").attr("icon", "ri:moon-line");
+    } else {
+      $("#toggle-dark").attr("icon", "ri:sun-line");
+    }
+
+    const toggleDark = () => {
+      console.log("toggle dark");
+      const darkMode = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("hexo-color-scheme", darkMode ? "dark" : "light");
+      $("#toggle-dark").attr("icon", darkMode ? "ri:moon-line" : "ri:sun-line");
+    };
+
+    $("#toggle-dark").click(toggleDark);
+  };
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" src="/images/logo.png" alt="ゴミ溜め場" />
+          ゴミ溜め場
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        音楽サブスクを考える回
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/karin722">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://mstdn.maud.io/@w_jb_">
+              <iconify-icon width="20" icon="ri:twitter-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5" title="toggle theme">
+          <iconify-icon width="20" icon="ri:sun-line" id="toggle-dark"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="p-12">
+    <!-- toc -->
+
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        カーステを自宅でつかう
+      </h1>
+      <p class="mb-6">
+        <p>やめとけ</p>
+      </p>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <time>2022-11-13 16:59:07</time>
+          <span class="text-gray-400">·</span>
+          <span>1 min</span>
+          <span class="text-gray-400">·</span>
+          <span>256 words</span>
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content mt-10 prose dark:prose-invert post-content">
+    <p>やめとけ</p>
+<span id="more"></span>
+<blockquote>
+<p>この記事は<a target="_blank" rel="noopener" href="https://adventar.org/calendars/6291">mstdn.maud.io Advent Calendar 2021</a> 20日目の記事です。昨日はあんふぃとらいとさんの<a target="_blank" rel="noopener" href="https://godolphin48.com/p/virtualstreamer%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1/">VirtualStreamerのススメ</a>でした</p>
+</blockquote>
+<p>自分のアバター使って配信するの面白そうですね。おれも<a target="_blank" rel="noopener" href="https://booth.pm/ja/items/2945751">チンパンアバター</a>でガンダム動物園やろうかな</p>
+<h2 id="これはなに"><a href="#これはなに" class="headerlink" title="これはなに"></a>これはなに</h2><p>最近デスクトップ生えたんですけど、モニターにスピーカー無くて音出せないことに気がついたんでカーステ置きました。普通に1万円くらいのサウンドバー買ったほうがいいです</p>
+<h2 id="用意するもの"><a href="#用意するもの" class="headerlink" title="用意するもの"></a>用意するもの</h2><ul>
+<li>カーステ<ul>
+<li>1dinで済むやつのほうがスペース取らなくていいかもしれないっすね</li>
+</ul>
+</li>
+<li>ゲームキューブのacアダプタ<ul>
+<li>Wiiのでもいいよ</li>
+</ul>
+</li>
+<li>スピーカー<ul>
+<li><img src="https://m.media-amazon.com/images/I/41fu713OT2L._AC_.jpg"> <br><a target="_blank" rel="noopener" href="https://www.amazon.co.jp/ONKYO-D-55EX-2%E3%82%A6%E3%82%A7%E3%82%A4%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0-2%E5%8F%B01%E7%B5%84-%E3%80%90%E5%9B%BD%E5%86%85%E6%AD%A3%E8%A6%8F%E5%93%81%E3%80%91/dp/B008UC9OFC/ref=sr_1_5?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC+onkyo&qid=1639656519&s=musical-instruments&sr=1-5">これみたいなやつ</a></li>
+<li>これ買うならサウンドバー買ったほうがいいです。私は動物園にあったやつ使いました</li>
+</ul>
+</li>
+<li>12vスイッチ<ul>
+<li><a target="_blank" rel="noopener" href="https://www.monotaro.com/k/store/12v%20%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81/">モノタロウ</a>とかで好きな形のやつ買いましょう</li>
+</ul>
+</li>
+<li>その他<ul>
+<li>ギボシ、エレクトロタップとか</li>
+</ul>
+</li>
+</ul>
+<h2 id="つくりかた"><a href="#つくりかた" class="headerlink" title="つくりかた"></a>つくりかた</h2><p>自己責任でやってください</p>
+<h3 id="acアダプタの加工"><a href="#acアダプタの加工" class="headerlink" title="acアダプタの加工"></a>acアダプタの加工</h3><p>コンセントから出てくるのはac100vなんで、コレをdc12vに変換するために用意したacアダプタを使用します。<br><br><br>手順としては非常にかんたんで、コードを切ってプラスとマイナスに分離します。その後先端にギボシ端子をつけたらおしまいです。また、BATTとACCに接続するため、プラス側は2本に分岐しておいてください。</p>
+<h3 id="カーステに配線をつなぐ"><a href="#カーステに配線をつなぐ" class="headerlink" title="カーステに配線をつなぐ"></a>カーステに配線をつなぐ</h3><h4 id="電源"><a href="#電源" class="headerlink" title="電源"></a>電源</h4><p>acアダプタから生えてきたプラス線をBATTとACCに接続します。BATTは直接繋げばいいですが、ACCは間にスイッチを挟んでおきます。こうすることで、電源を切れるようになりますし、BATTは常時通電しているのでメモリーが飛ぶ心配もありません。<br><br><br>アース側は直接繋げばいいです。ただし、カーステ側の配線の先端がクワガタ端子の場合は、切ってギボシ端子に加工するのがいいと思います。</p>
+<h4 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h4><p>スピーカー線はそれぞれLRにスピーカー線を繋げます。かんたん<br><br><br>サイドブレーキがどうたらで動作に支障がある場合は、サイドブレーキ線をアースに落としてやればいいです。エレクトロタップ等で適当にアース線を分岐させて、そこに繋げておけばいいと思います。</p>
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>これやるくらいなら絶対サウンドバー買ったほうがいいです。俺もほしい</p>
+<p>明日はせっちゃんさんの記事です。</p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/Other/">Other</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+        <a href="/2021/12/29/bbuy21/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          チンパンジーが選ぶ！今年買ってよかったもの
+        </a>
+      
+    </div>
+    <div>
+      
+        <a href="/2021/02/20/fr/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          ubuntuにおけるios14のfuturerestoreについて
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+  
+<script src="/lib/clipboard.min.js"></script>
+
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+</body>
+
+</html>

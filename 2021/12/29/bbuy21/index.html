@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="チンパンジー">
+
+
+
+
+
+<title>チンパンジーが選ぶ！今年買ってよかったもの | ゴミ溜め場</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography,line-clamp"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+  }
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+  })();
+  window.onload = function () {
+    // init iconify icon
+    const isDark = document.documentElement.classList.contains("dark");
+    if (isDark) {
+      $("#toggle-dark").attr("icon", "ri:moon-line");
+    } else {
+      $("#toggle-dark").attr("icon", "ri:sun-line");
+    }
+
+    const toggleDark = () => {
+      console.log("toggle dark");
+      const darkMode = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("hexo-color-scheme", darkMode ? "dark" : "light");
+      $("#toggle-dark").attr("icon", darkMode ? "ri:moon-line" : "ri:sun-line");
+    };
+
+    $("#toggle-dark").click(toggleDark);
+  };
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" src="/images/logo.png" alt="ゴミ溜め場" />
+          ゴミ溜め場
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        音楽サブスクを考える回
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/karin722">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://mstdn.maud.io/@w_jb_">
+              <iconify-icon width="20" icon="ri:twitter-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5" title="toggle theme">
+          <iconify-icon width="20" icon="ri:sun-line" id="toggle-dark"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="p-12">
+    <!-- toc -->
+
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        チンパンジーが選ぶ！今年買ってよかったもの
+      </h1>
+      <p class="mb-6">
+        <p>こっちをアドカレに書くべきだったかもしれん</p>
+      </p>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <time>2022-11-13 16:59:07</time>
+          <span class="text-gray-400">·</span>
+          <span>2 min</span>
+          <span class="text-gray-400">·</span>
+          <span>517 words</span>
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content mt-10 prose dark:prose-invert post-content">
+    <p>こっちをアドカレに書くべきだったかもしれん</p>
+<span id="more"></span>
+
+<h1 id="これは何？"><a href="#これは何？" class="headerlink" title="これは何？"></a>これは何？</h1><p>チンパンジーが今年買ってよかったものを紹介してくやつ</p>
+<h1 id="デスク編"><a href="#デスク編" class="headerlink" title="デスク編"></a>デスク編</h1><p>机の上に物が増えたり減ったりした</p>
+<h2 id="デスクトップパソコン"><a href="#デスクトップパソコン" class="headerlink" title="デスクトップパソコン"></a>デスクトップパソコン</h2><p>決死の努力により、ついにバナナとピーナッツでパソコンを組むことに成功しました。末代の中だと中間層くらいの位置(?)のスペックです。</p>
+<h2 id="keychron-k2-US配列-赤軸"><a href="#keychron-k2-US配列-赤軸" class="headerlink" title="keychron k2 US配列 赤軸"></a>keychron k2 US配列 赤軸</h2><img src=https://m.media-amazon.com/images/I/61efvyxdAZL._AC_SX466_.jpg width=80%>
+
+<p><a target="_blank" rel="noopener" href="https://www.amazon.com/Keychron-Bluetooth-Wireless-Mechanical-Tenkeyless-Keyboard/dp/B07QBPDWLS"><strong>Amazon US</strong></a><br>ニンゲンから売ってもらいました。コンパクトなサイズ感と、無理のないキー配列(どっかが小さくなったりしてない)でとても満足しています。</p>
+<h2 id="logicool-mx-master-3"><a href="#logicool-mx-master-3" class="headerlink" title="logicool mx master 3"></a>logicool mx master 3</h2><img src=https://m.media-amazon.com/images/I/51aQNkGm1rL._AC_SL1000_.jpg width=60%>
+
+<p><a target="_blank" rel="noopener" href="https://www.amazon.co.jp/%E3%83%AD%E3%82%B8%E3%82%AF%E3%83%BC%E3%83%AB-%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%83%9E%E3%82%A6%E3%82%B9-MX2200sGR-Bluetooth-%E9%AB%98%E9%80%9F%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%AB/dp/B07XQ6XD8J/ref=asc_df_B07XQ6XD8J/?tag=jpgo-22&linkCode=df0&hvadid=342469141187&hvpos=&hvnetw=g&hvrand=13070046424939114190&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009454&hvtargid=pla-821559336613&psc=1&th=1&psc=1&tag=&ref=&adgrpid=70390892138&hvpone=&hvptwo=&hvadid=342469141187&hvpos=&hvnetw=g&hvrand=13070046424939114190&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009454&hvtargid=pla-821559336613"><strong>Amazon</strong></a><br><strong>悪のオフ会</strong>(詳細は<a target="_blank" rel="noopener" href="https://hinabita.com/2021/12/24/advent2021/">ひらちょんさんの記事で！</a>)で格安で売ってたのを見かけて購入しました。持ってて疲れないしオススメですよ。</p>
+<h2 id="logicool-g733"><a href="#logicool-g733" class="headerlink" title="logicool g733"></a>logicool g733</h2><img src=https://m.media-amazon.com/images/I/71xNjrzG69L._AC_SL1500_.jpg width=60%>
+
+<p><a target="_blank" rel="noopener" href="https://www.amazon.co.jp/Logicool-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%98%E3%83%83%E3%83%89%E3%82%BB%E3%83%83%E3%83%88-LIGHTSPEED%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9-%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%90%E3%83%B3%E3%83%89-G733-BK/dp/B08FSYJ92M/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3B0V5K4K8RCL2&keywords=g733&m=AN1VRQENFRJN5&qid=1640515947&refinements=p_6:AN1VRQENFRJN5&s=electronics&sprefix=g733,electronics,192&sr=1-1"><strong>Amazon</strong></a><br>ニンゲンとの通話用にヘッドセットを購入しました。色々悩んでたんすけど、無線で軽いの探してたらコレにたどり着きました。周りの音も聞こえるし、マイクミュートボタンが付いてるのは便利でいいですね。</p>
+<p>軽いのはいいんですが、使ってると少々顎が痛いです。付け方が悪いのかな…？</p>
+<h2 id="Xbox-Elite-ワイヤレス-コントローラー-シリーズ-2"><a href="#Xbox-Elite-ワイヤレス-コントローラー-シリーズ-2" class="headerlink" title="Xbox Elite ワイヤレス コントローラー シリーズ 2"></a>Xbox Elite ワイヤレス コントローラー シリーズ 2</h2><img src=https://m.media-amazon.com/images/I/51QtjK5JZyL._AC_SL1080_.jpg width=60%>
+
+<p><a target="_blank" rel="noopener" href="https://www.amazon.co.jp/Xbox-Elite-%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC-%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA/dp/B07V8VMY9Q/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=F234DW1BNBQJ&keywords=%E3%82%A8%E3%83%AA%E3%82%B3%E3%83%B32&m=AN1VRQENFRJN5&qid=1640515981&refinements=p_6:AN1VRQENFRJN5&sprefix=%E3%82%A8%E3%83%AA%E3%82%B3%E3%83%B32+,aps,191&sr=8-1"><strong>Amazon</strong></a><br>DS3のスティックがドリフトし出したので購入しました。スティックの位置が若干気になっていたのですが、慣れると結構気にならないもんですね。スティックの重さ変えられるのがお気に入りです。充電スタンドあるのも嬉しいです。</p>
+<p>ニンゲンから安く購入したので、破産の危機と向き合わずに済みました。ありがとう…</p>
+<h2 id="Xbox-ワイヤレス-アダプター-for-Windows-10"><a href="#Xbox-ワイヤレス-アダプター-for-Windows-10" class="headerlink" title="Xbox ワイヤレス アダプター for Windows 10"></a>Xbox ワイヤレス アダプター for Windows 10</h2><img src="https://compass-ssl.xbox.com/assets/d4/77/d477841d-499c-4851-ac9a-608a9d683930.jpg?n=X1-Wireless-Adapter-Windows_Hero-desktop_1920x540.jpg" width=80%>
+
+<p><a target="_blank" rel="noopener" href="https://www.xbox.com/ja-JP/accessories/adapters/wireless-adapter-windows"><strong>Micorsoft store</strong></a><br>おれ: エリコンってBluetoothで繋がる？</p>
+<p>ニンゲン: 繋がるけどアダプタ買ったほうがいいよ</p>
+<p>おれ: ア゛イ</p>
+<h2 id="logicool-g913-tkl"><a href="#logicool-g913-tkl" class="headerlink" title="logicool g913 tkl"></a>logicool g913 tkl</h2><img src=https://m.media-amazon.com/images/I/61msA-lwCPL._AC_SL1500_.jpg width=80%>
+
+<p><a target="_blank" rel="noopener" href="https://www.amazon.co.jp/Logicool-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89-G913-CK-%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%AB%E3%83%AB%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89-LIGHTSYNC/dp/B07VYQZWSF"><strong>Amazon</strong></a><br>パームレストを消滅させたかったので購入しました。パームレストいらずの薄さで大変満足しています。</p>
+<hr>
+<h1 id="端末編"><a href="#端末編" class="headerlink" title="端末編"></a>端末編</h1><p>今年はそんなに端末転がしてないです、多分</p>
+<h2 id="iPhone-12mini-64gb-ブルー-2代目"><a href="#iPhone-12mini-64gb-ブルー-2代目" class="headerlink" title="iPhone 12mini 64gb ブルー (2代目)"></a>iPhone 12mini 64gb ブルー (2代目)</h2><p>初代12miniは特定のバージョンを維持していたのですが、やらかして最新のOSになってしまったので急遽買いました。</p>
+<p>特定バージョン、なおかつ未使用なのが64gbモデルしかなくて泣きました。足りるやろ！って思ったんすけど結構カツカツでしんどかったです。</p>
+<h2 id="iPhone-12mini-128gb-ブラック-3代目"><a href="#iPhone-12mini-128gb-ブラック-3代目" class="headerlink" title="iPhone 12mini 128gb ブラック (3代目)"></a>iPhone 12mini 128gb ブラック (3代目)</h2><p>キャリアで安く投げ売りされていたので買い替えました。前述のバージョンの件もクリア、おつりがくる感じで買い替えできたので満足しています。</p>
+<h2 id="iPad-mini-6th-スペースグレイ"><a href="#iPad-mini-6th-スペースグレイ" class="headerlink" title="iPad mini 6th スペースグレイ"></a>iPad mini 6th スペースグレイ</h2><img src="https://m.media-amazon.com/images/I/71xAVVHscdL._AC_SL1500_.jpg" width=30%>
+
+<p><a target="_blank" rel="noopener" href="https://www.amazon.co.jp/dp/B09G9KGPJF/ref=fs_i_i_4"><strong>Amazon</strong></a><br>なんか急に欲しくなってきたので買いました。フィルムは<a target="_blank" rel="noopener" href="https://www.amazon.co.jp/gp/product/B09G9C7M95/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1">ミヤビックス</a>、ケースは<a target="_blank" rel="noopener" href="https://www.amazon.co.jp/gp/product/B099RZ72N5/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1">ESR</a>のものを使用しています。ミヤビックスのフィルムは結構縁まで攻めてくれるので好きです。</p>
+<p>ケースは<a target="_blank" rel="noopener" href="https://www.amazon.co.jp/Apple-%E7%94%A8Smart-Folio-iPad-mini/dp/B09G945Z8P">Smart Folio</a>とかに買い替えてもいいかなーとか思ってます。たけーんだよなアレ。<br>サイズ感がとても持ち運びにピッタリです。また、スクフェス&#x2F;マギレコもやりやすい大きさで満足してます。スクスタ？知らないっすね…</p>
+<h2 id="Oculus-Rift-S"><a href="#Oculus-Rift-S" class="headerlink" title="Oculus Rift S"></a>Oculus Rift S</h2><p>なんとニンゲンから頂きました。ありがとうございます！</p>
+<p>vr酔いするのであんまり長時間はできないんですが、たまにバーチャルチンパンジーが出没してます。仲良くしてね。</p>
+<hr>
+<h1 id="アニメグッズ編"><a href="#アニメグッズ編" class="headerlink" title="アニメグッズ編"></a>アニメグッズ編</h1><p>末代はアイマス勢ばっかだからここ興味ないだろ、チンパンジー知ってるんですよ。</p>
+<h2 id="R3BIRTH-MONSTER-GIRLS"><a href="#R3BIRTH-MONSTER-GIRLS" class="headerlink" title="R3BIRTH - MONSTER GIRLS"></a>R3BIRTH - MONSTER GIRLS</h2><div class="video-container"><iframe src="https://www.youtube.com/embed/mMQJDmBFMlM" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p>めっっっっっちゃかっこいい。はよライブでききてーになっとる</p>
+<p>概要欄にこんな事が書いてありました</p>
+<blockquote>
+<p>スクスタのストーリー28章をプレイすると、栞子ちゃん、ミアちゃん、ランジュちゃんが<br>どんな気持ちを込めてこの曲を披露したのか、より深く知ることが出来ますよ！</p>
+</blockquote>
+<p>黙れ</p>
+<h2 id="Liella-ノンフィクション-x2F-Starlight-Prologue"><a href="#Liella-ノンフィクション-x2F-Starlight-Prologue" class="headerlink" title="Liella! - ノンフィクション!!&#x2F;Starlight Prologue"></a>Liella! - ノンフィクション!!&#x2F;Starlight Prologue</h2><div class="video-container"><iframe src="https://www.youtube.com/embed/_oZ3EcOO5xU" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>「今輝きたいのにそんな気持ちはここで最後に」のとことか、こう、その…すごい好きです。</p>
+<p>今回ラップ調の曲を主人公側が歌うって珍しいですよね。新しい挑戦って感じがして面白いと思います。</p>
+<h2 id="津島善子-from-Aqours-LoveLive-Sunshine-Tsushima-Yoshiko-First-Solo-Concert-Album-〜in-this-unstable-world〜"><a href="#津島善子-from-Aqours-LoveLive-Sunshine-Tsushima-Yoshiko-First-Solo-Concert-Album-〜in-this-unstable-world〜" class="headerlink" title="津島善子 from Aqours - LoveLive! Sunshine!! Tsushima Yoshiko First Solo Concert Album 〜in this unstable world〜"></a>津島善子 from Aqours - LoveLive! Sunshine!! Tsushima Yoshiko First Solo Concert Album 〜in this unstable world〜</h2><img src=https://m.media-amazon.com/images/I/71MrpygRPjS._AC_SL1000_.jpg width=60%>
+
+<p><a target="_blank" rel="noopener" href="https://www.amazon.co.jp/LoveLive-Sunshine-Tsushima-Yoshiko-Concert/dp/B086RF9TW2"><strong>Amazon</strong></a><br>ついに来た！念願の推しソロアルバムです。ソロ版Deep Resonanceめっちゃすき。</p>
+<h2 id="『ラブライブ！虹ヶ咲学園スクールアイドル同好会』QU4RTZ-デスクマット"><a href="#『ラブライブ！虹ヶ咲学園スクールアイドル同好会』QU4RTZ-デスクマット" class="headerlink" title="『ラブライブ！虹ヶ咲学園スクールアイドル同好会』QU4RTZ デスクマット"></a>『ラブライブ！虹ヶ咲学園スクールアイドル同好会』QU4RTZ デスクマット</h2><img src=https://d1hc4zdhstp3wq.cloudfront.net/img/goods/L/302112001119.jpg width=40%>
+
+<p><a target="_blank" rel="noopener" href="https://dengekiya.com/shop/g/g4942330164822/">dengekiya.com</a><br>デスクマットもlogicool製品で揃えようかと思ってましたが、QU4RTZのデスクマットが出ると聞いて予約しました。かすみんかわいいっすね。</p>
+<h1 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h1><p>デスク周りは当分金使わんでもよさそうな気がします。強いて言うならモニターとサウンドバー欲しいかもしれん。</p>
+<p>そういえば今年ももうすぐ終わりですね。私もお酒解禁されるので、年末はバナナの酒でも買って狂おうかと思ってます。バナナの酒なんてあるんすかね…？</p>
+<p>皆さん良いお年を。来年もよろしくね。</p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/Other/">Other</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+        <a href="/2022/12/11/adv2022/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          音楽サブスクを考える回
+        </a>
+      
+    </div>
+    <div>
+      
+        <a href="/2021/12/20/adv2021/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          カーステを自宅でつかう
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+  
+<script src="/lib/clipboard.min.js"></script>
+
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+</body>
+
+</html>

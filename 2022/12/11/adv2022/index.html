@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="チンパンジー">
+
+
+
+
+
+<title>音楽サブスクを考える回 | ゴミ溜め場</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography,line-clamp"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+  }
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+  })();
+  window.onload = function () {
+    // init iconify icon
+    const isDark = document.documentElement.classList.contains("dark");
+    if (isDark) {
+      $("#toggle-dark").attr("icon", "ri:moon-line");
+    } else {
+      $("#toggle-dark").attr("icon", "ri:sun-line");
+    }
+
+    const toggleDark = () => {
+      console.log("toggle dark");
+      const darkMode = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("hexo-color-scheme", darkMode ? "dark" : "light");
+      $("#toggle-dark").attr("icon", darkMode ? "ri:moon-line" : "ri:sun-line");
+    };
+
+    $("#toggle-dark").click(toggleDark);
+  };
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" src="/images/logo.png" alt="ゴミ溜め場" />
+          ゴミ溜め場
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        音楽サブスクを考える回
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/karin722">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://mstdn.maud.io/@w_jb_">
+              <iconify-icon width="20" icon="ri:twitter-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5" title="toggle theme">
+          <iconify-icon width="20" icon="ri:sun-line" id="toggle-dark"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="p-12">
+    <!-- toc -->
+
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        音楽サブスクを考える回
+      </h1>
+      <p class="mb-6">
+        
+      </p>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <time>2022-12-10 23:38:13</time>
+          <span class="text-gray-400">·</span>
+          <span>3 min</span>
+          <span class="text-gray-400">·</span>
+          <span>757 words</span>
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content mt-10 prose dark:prose-invert post-content">
+    <p>考えろ</p>
+<blockquote>
+<p>この記事は「<a target="_blank" rel="noopener" href="https://adventar.org/calendars/7364">mstdn.maud.io Advent Calendar 2022</a>」11日目の記事です。<br>  昨日はkb10uyくんの<a target="_blank" rel="noopener" href="https://kb10uy.org/posts/matsudai-adc-2022/">「久しぶりにミニ四駆で遊びはじめた話」</a>でした。</p>
+</blockquote>
+<p>ミニ四駆復帰勢だ！Mastodonに移住してからミニ四駆の話したすぎてウズウズしてたので嬉しいです。<br>おれはもっぱらMSフレキばっか触ってたんですが、この記事見て3レーン用にMA組もうかな〜ってなってます。たのしそう</p>
+<h2 id="ことしを振り返って"><a href="#ことしを振り返って" class="headerlink" title="ことしを振り返って"></a>ことしを振り返って</h2><p>振り返るな</p>
+<h3 id="Aqours-6th-LoveLive-～KU-RU-KU-RU-Rock-‘n’-Roll-TOUR～-＜OCEAN-STAGE＞"><a href="#Aqours-6th-LoveLive-～KU-RU-KU-RU-Rock-‘n’-Roll-TOUR～-＜OCEAN-STAGE＞" class="headerlink" title="Aqours 6th LoveLive! ～KU-RU-KU-RU Rock ‘n’ Roll TOUR～ ＜OCEAN STAGE＞"></a>Aqours 6th LoveLive! ～KU-RU-KU-RU Rock ‘n’ Roll TOUR～ ＜OCEAN STAGE＞</h3><p>なんか両日チケ取れたんで行ってきました。<br>正直４曲くらい初めて聞きました</p>
+<h3 id="ウマ娘-4th-EVENT「SPECIAL-DREAMERS-」東京公演"><a href="#ウマ娘-4th-EVENT「SPECIAL-DREAMERS-」東京公演" class="headerlink" title="ウマ娘 4th EVENT「SPECIAL DREAMERS!!」東京公演"></a>ウマ娘 4th EVENT「SPECIAL DREAMERS!!」東京公演</h3><p>１日目のみ行ってきました。まさかのアリーナ席。ありがとうイープラス。次もよろしくな。<br>両日行く気満々だったんですが、２日目のチケがどうしても取れずに泣きました。</p>
+<p>「Exercise the Rightとtransforming聞けたらいいなー、本命はLucky Comes True!だけど…」とか思ってたらマジで来た。アリーナで推し曲だぞおい。イントロで震えたのを今でも覚えてます。UO折りまくった</p>
+<p>transformingはまさかのフクスズでオタクニチャニチャスマイルなってました。振り付けみてて気狂うかと思った</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5V3ooILkQ076X0jWHQTkkb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<h3 id="ウマ娘-4th-EVENT「SPECIAL-DREAMERS-」横浜公演"><a href="#ウマ娘-4th-EVENT「SPECIAL-DREAMERS-」横浜公演" class="headerlink" title="ウマ娘 4th EVENT「SPECIAL DREAMERS!!」横浜公演"></a>ウマ娘 4th EVENT「SPECIAL DREAMERS!!」横浜公演</h3><p>これは２日目のみ行ってきました。おいよろしくって言ったじゃねーか。両日行かせろ</p>
+<p>武名疾走！からUNLIITED IMPACTまでの流れはだめだろ〜〜〜〜〜〜〜〜〜〜〜〜〜こんなんきたら腕取れますよマジで</p>
+<p>あとGo This Way聞けるとは思わなかったです。最高</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2tSjli3fYqvGFuranunpTX?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<h3 id="バンダイナムコエンターテインメントフェスティバル-2nd"><a href="#バンダイナムコエンターテインメントフェスティバル-2nd" class="headerlink" title="バンダイナムコエンターテインメントフェスティバル 2nd"></a>バンダイナムコエンターテインメントフェスティバル 2nd</h3><p>これも２日目だけ行ってきました。チケット買ってから1年ちょいの開催です。</p>
+<p>初めてシャニマスの曲聞いたんすけど、Hide&amp;Attackの攻撃力999999999食らって死んでました。<br>お目当てのAqoursのセトリは凶悪過ぎて腕取れました。レギュ違反なしでUO折れるのもアツかった。スリワンとJIMO*AI Dash!はだめだろ〜〜<br>765ASも初めてだったんすけど、セトリ全部刺さって意識どっかいってました。Aqoursでブチ上がった後のCHANGE!!!!はマジでエグかった。<br>ラストのTMRで体力全部使って会場で一泊しようかと思いました。SEED劇場版の話した後のZipsはだめだよ本当に。</p>
+<p>UO１袋しか持ってきてなかったのは今でも悔やんでます。300本くらい持ってけばよかった。</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3s81bDAFvPaBG3DNZVKNZ3?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<h3 id="ウマ娘-4th-EVENT「SPECIAL-DREAMERS-」EXTRA-STAGE"><a href="#ウマ娘-4th-EVENT「SPECIAL-DREAMERS-」EXTRA-STAGE" class="headerlink" title="ウマ娘  4th EVENT「SPECIAL DREAMERS!!」EXTRA STAGE"></a>ウマ娘  4th EVENT「SPECIAL DREAMERS!!」EXTRA STAGE</h3><p>念願の両日参戦です。ありがとうイープラス。</p>
+<p>１日目は始めっからうまぴょい流れたりで最高だったんすけど、特にユメゾラとMy Against Fightとunbreakable聞けたのが満足度高かったです。UO100本じゃ足りないです</p>
+<p>２日目はミッドナイト・エピローグとSEVENとExercise the Right(Remix Ver.)と禁断Burning Heart(Remix Ver.)とNever Looking Back(Remix Ver.)とアウト・オブ・トライアングルとBLAZE聞けて意識飛んでました。曲多すぎだろ<br>てかソロ組は完全ノーマーク、Never Looking Backも公開されてるぱかアゲMIXの中で一番好きな曲だったのでマジで最高でした。</p>
+<p>２日目はUO増量して行ったんですけど、気づいたらなんか無くなってました。なんで？</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3T8u1Vk2gt9Sz6aSUXwfUh?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<br>
+<iframe width="100%" height="425" src="https://www.youtube.com/embed/vOuF1G1W8PU" title="【ウマ娘 プリティーダービー】「Never Looking Back (PandaBoY Remix)」" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="本題"><a href="#本題" class="headerlink" title="本題"></a>本題</h2><p>やっと本題です。</p>
+<p>信号機の黄色がUOにしか見えなくなりました。どうもチンパンジーです。</p>
+<p>ぼくもついにUOで目が潰れたのかもしれません。今まで散々「UOで目がやられた❗UOつかうのやめろ❗❗」とかいうツイートをバカにしてきましたが、今ならその気持ちが分かります。ごめんな。</p>
+<p>というわけで本題行きます</p>
+<h2 id="再生環境"><a href="#再生環境" class="headerlink" title="再生環境"></a>再生環境</h2><ul>
+<li>iPhone -&gt; Airpodsが基本<ul>
+<li>通学とかは大抵これ</li>
+</ul>
+</li>
+<li>檻に入ったらPCでも再生したい<ul>
+<li>この表現久しぶりに使ったかもしれん</li>
+</ul>
+</li>
+<li><strong>ローカルファイルと同居したい</strong><ul>
+<li>はやくサブスク解禁してくれ</li>
+</ul>
+</li>
+</ul>
+<h2 id="選定"><a href="#選定" class="headerlink" title="選定"></a>選定</h2><p>今どき音楽のサブスクなんてそれなりにあるんですけど、ローカルファイルと同居できるサービスを選びました。<br>あと学割が使えたら嬉しいですね。金ねーもん</p>
+<h3 id="Spotify"><a href="#Spotify" class="headerlink" title="Spotify"></a>Spotify</h3><ul>
+<li>みんな大好きSpotify</li>
+<li>学割あり</li>
+<li>ローカルと同居可<ul>
+<li>ただし表示に難あり</li>
+</ul>
+</li>
+</ul>
+<img src="/2022/12/11/adv2022//spotify.png" width="100%" height="auto"/>
+
+<p>これアルバム表示とかできないんすよね。もうちょっとどうにかならんの<br>話逸れるんすけど、秘密のトワレめっちゃ好きです。はよフルバージョンきかせろ</p>
+<h3 id="LINE-Music"><a href="#LINE-Music" class="headerlink" title="LINE Music"></a>LINE Music</h3><ul>
+<li>周りが結構使ってるイメージ<ul>
+<li>プロフィールに音楽設定できるけどあんま使わんくね</li>
+</ul>
+</li>
+<li>学割あり<ul>
+<li>一番安い</li>
+</ul>
+</li>
+<li>ローカルと同居可<ul>
+<li>アルバム表示できるので◎</li>
+</ul>
+</li>
+<li>いらん自社広告が邪魔</li>
+</ul>
+<img src="/2022/12/11/adv2022//linemusic.png" width="100%" height="auto"/>
+
+<p>再生画面の歌詞表示はまぁまぁ好きです。でかい興味ない自社広告さえなければこれにしてたかも</p>
+<h3 id="YouTubeMusic"><a href="#YouTubeMusic" class="headerlink" title="YouTubeMusic"></a>YouTubeMusic</h3><ul>
+<li>Youtube Premium契約で一緒についてくる<ul>
+<li>お得感あっていいよね</li>
+</ul>
+</li>
+<li>学割あり</li>
+<li>ローカル同居可</li>
+<li>再生画面のタイトルのフォントが気に入らん</li>
+</ul>
+<img src="/2022/12/11/adv2022//ytm.png" width="100%" height="auto"/>
+
+<p>これ。なんでここだけシステムフォントじゃないんだ…？</p>
+<h3 id="Amazon-Music"><a href="#Amazon-Music" class="headerlink" title="Amazon Music"></a>Amazon Music</h3><p>エラー出るからなし</p>
+<h3 id="AppleMusic"><a href="#AppleMusic" class="headerlink" title="AppleMusic"></a>AppleMusic</h3><ul>
+<li>ローカル同居可<ul>
+<li>音質は下がるものの、Airpodsでしか基本聞かないからギリセーフ</li>
+<li>同期時にライブラリめちゃくちゃなるらしいけど自分の環境はなってないです</li>
+</ul>
+</li>
+<li>学割あり</li>
+<li>サードパーティのプレイヤーがいっぱいある</li>
+</ul>
+<img src="/2022/12/11/adv2022//applemusic.png" width="100%" height="auto"/>
+
+<p>iOSのプレイヤーは<a target="_blank" rel="noopener" href="https://apps.apple.com/jp/app/marvis-pro/id1447768809">Marvis Pro</a>とかいうの使ってます。値段たけーんだわ…<br>一筆書きでアルバム〜プレイリスト間を移動できるのがめっちゃ便利です。慣れるとこれ以外使えない体に調教されます。<br>あと見た目がいいです。ここ大事。<br>Windowsは<a target="_blank" rel="noopener" href="https://cider.sh/">Cider</a>を使っています。iTunesより軽量で使いやすいです。</p>
+<img src="/2022/12/11/adv2022//cider.png" width="100%" height="auto"/>
+
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>察しのいいニンゲン共はもうお分かりでしょうが、AppleMusicにしました。とりあえずローカル曲と同居する必要がなくなるまでは当分これで行きます。おわり</p>
+<h2 id="おまけ"><a href="#おまけ" class="headerlink" title="おまけ"></a>おまけ</h2><p>実はボツ案として「光るチンパンジーを支える楽曲10選」ってのがありました。紹介する予定だった曲をまとめたプレイリストだけ残ってたので置いておきます。みんな聴いてね</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7q9CvCdl6O1AJTodXYh224?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<p>明日はやすけくんです。秘密のトワレ聴いてから一ノ瀬志希のよさに惹かれつつあります。助けてください</p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+    </div>
+    <div>
+      
+        <a href="/2021/12/29/bbuy21/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          チンパンジーが選ぶ！今年買ってよかったもの
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+  
+<script src="/lib/clipboard.min.js"></script>
+
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+</body>
+
+</html>
