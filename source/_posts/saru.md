@@ -5,9 +5,7 @@ tags: Other
 ---
 
 >この記事は[末代AdventCalendar](https://adventar.org/calendars/5046)24日目の記事です。
-<!-- more -->
->昨日はやさいさんの[
-2020年に買ってしまったブツを並べて2021年に向けお財布を引き締めていこう](https://okimochi.info/other/210/)でした。
+>昨日はやさいさんの[2020年に買ってしまったブツを並べて2021年に向けお財布を引き締めていこう](https://okimochi.info/other/210/)でした。
 
 Note20 Ultra 5Gいいなぁっつっとる。あと白いキーボードかっこええ
 
