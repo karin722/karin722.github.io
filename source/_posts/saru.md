@@ -1,7 +1,7 @@
 ---
 title: バナナ
 date: 2020-12-24 00:00:00
-tags: Other
+tags: AdventCalendar
 ---
 
 >この記事は[末代AdventCalendar](https://adventar.org/calendars/5046)24日目の記事です。
